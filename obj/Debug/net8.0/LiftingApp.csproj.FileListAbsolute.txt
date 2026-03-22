@@ -32,3 +32,4 @@ C:\Users\eman1\source\repos\LiftingApp\LiftingApp\obj\Debug\net8.0\refint\Liftin
 C:\Users\eman1\source\repos\LiftingApp\LiftingApp\obj\Debug\net8.0\LiftingApp.pdb
 C:\Users\eman1\source\repos\LiftingApp\LiftingApp\obj\Debug\net8.0\LiftingApp.genruntimeconfig.cache
 C:\Users\eman1\source\repos\LiftingApp\LiftingApp\obj\Debug\net8.0\ref\LiftingApp.dll
+C:\Users\eman1\source\repos\LiftingApp\LiftingApp\obj\Debug\net8.0\LiftingApp.sourcelink.json
