@@ -2,8 +2,58 @@
     ViewData["Title"] = "Home";
 }
 
-<h1>Welcome to our Lifting App</h1>
+<div class="container mt-5">
 
-<p>This app is designed for tracking workouts and exercises.</p>
+    <!-- HERO SECTION -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Welcome to LiftingApp</h1>
+        <p class="lead text-muted">
+            Track your workouts. Stay consistent. Build strength.
+        </p>
 
-<p>I enjoy lifting and wanted to build a simple app to help organize workouts.</p>
+        <a asp-controller="Workout" asp-action="Index" class="btn btn-primary btn-lg mt-3">
+            View Workouts
+        </a>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm p-3 h-100">
+                <h4>🏋️ Track Workouts</h4>
+                <p class="text-muted">
+                    Keep a list of all your exercises and routines in one place.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm p-3 h-100">
+                <h4>📈 Stay Consistent</h4>
+                <p class="text-muted">
+                    Build habits and stay on track with your fitness goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm p-3 h-100">
+                <h4>💪 Get Stronger</h4>
+                <p class="text-muted">
+                    Focus on progressive overload and improving every session.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <div class="text-center mt-5">
+        <h3>Ready to start?</h3>
+        <a asp-controller="Workout" asp-action="Create" class="btn btn-success btn-lg mt-2">
+            Add Your First Workout
+        </a>
+    </div>
+
+</div>

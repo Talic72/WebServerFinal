@@ -1,0 +1,40 @@
+﻿@model List<LiftingApp.Models.Exercise>
+
+<h2 class="mb-4 text-center">Workout List</h2>
+
+<form method="get" class="mb-3">
+    <input type="text" name="search" class="form-control" placeholder="Search workouts..." />
+</form>
+
+<div class="text-center mb-3">
+    <a asp-action="Create" class="btn btn-primary">
+        Add New Workout
+    </a>
+</div>
+
+<table class="table table-striped table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Muscle Group</th>
+            <th>Difficulty</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.MuscleGroup</td>
+                <td>@item.Difficulty</td>
+                <td>@item.Description</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

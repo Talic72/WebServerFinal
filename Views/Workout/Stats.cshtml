@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Workout Stats";
+    var muscleGroups = ViewBag.MuscleGroups;
+}
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-4">Workout Statistics</h1>
+
+    <!-- TOTAL -->
+    <div class="card p-4 shadow-sm mb-4 text-center">
+        <h3>Total Workouts</h3>
+        <h1>@ViewBag.TotalWorkouts</h1>
+    </div>
+
+    <!-- BREAKDOWN -->
+    <div class="card p-4 shadow-sm">
+        <h4 class="mb-3">Workouts by Muscle Group</h4>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Muscle Group</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in muscleGroups)
+                {
+                    <tr>
+                        <td>@item.Muscle</td>
+                        <td>@item.Count</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
