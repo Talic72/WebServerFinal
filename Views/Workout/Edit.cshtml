@@ -1,0 +1,40 @@
+﻿@model LiftingApp.Models.Exercise
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Edit Workout</h2>
+
+    <form asp-action="Edit" method="post" class="card p-4 shadow-sm">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Muscle Group</label>
+            <input asp-for="MuscleGroup" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Difficulty</label>
+            <select asp-for="Difficulty" class="form-control">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-warning">Save Changes</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+
+    </form>
+</div>
